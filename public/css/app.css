@@ -29,6 +29,10 @@ body {
 }
 a { color: var(--primary); text-underline-offset: 3px; }
 a:hover { color: var(--primary-dark); }
+main p, main li, .warning .wrap, footer .wrap {
+    text-align: justify;
+    text-align-last: left;
+}
 .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
 h1 { font-size: clamp(28px, 4vw, 34px); line-height: 1.2; }
 h2 { font-size: 21px; line-height: 1.3; }
@@ -80,6 +84,7 @@ li { padding-block: 4px; }
 .search { display: grid; max-width: 660px; gap: 10px; }
 .search label { font-weight: 700; }
 .search select { min-height: 48px; padding: 10px; border: 1px solid #6B7280; border-radius: 8px; background: #fff; color: var(--ink); font: inherit; }
+.search .field-help { margin-block: 0 8px; color: var(--muted); font-size: 14px; }
 footer { padding-block: 26px; background: var(--footer-bg); color: var(--muted); }
 
 /* Responsive and preference support */

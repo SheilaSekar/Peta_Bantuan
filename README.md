@@ -15,6 +15,8 @@ php artisan serve
 
 Tidak ada database yang dipakai aplikasi. Aset CSS dan JavaScript langsung dilayani dari `public/`; tidak ada proses build front-end. Jalankan tes dengan `php artisan test` dan format dengan `./vendor/bin/pint` (Windows: `vendor/bin/pint`).
 
+Regresi JavaScript untuk filter wilayah dapat dijalankan dengan `node --test tests/js/region-filter.test.cjs` (Node.js hanya diperlukan untuk tes ini, bukan untuk menjalankan situs).
+
 Pada Windows, bila Composer melaporkan `ext-fileinfo` tidak tersedia, aktifkan ekstensi `fileinfo` pada `php.ini` CLI yang dipakai Composer, lalu buka terminal baru dan ulangi pemasangan.
 
 ## Data layanan

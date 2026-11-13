@@ -55,9 +55,29 @@ class PublicPagesTest extends TestCase
         $this->get('/cari/jawa-barat')->assertOk()->assertSee('SAPA 129');
     }
 
+    public function test_city_select_lists_non_javascript_fallback_options_in_province_groups(): void
+    {
+        $this->get('/cari')
+            ->assertOk()
+            ->assertSee('<optgroup label="DKI Jakarta" data-provinsi="dki-jakarta">', false)
+            ->assertSee('<optgroup label="Jawa Barat" data-provinsi="jawa-barat">', false)
+            ->assertSee('Kota Jakarta Selatan')
+            ->assertSee('Kota Contoh');
+    }
+
     public function test_sample_services_have_no_active_phone_or_whatsapp_links(): void
     {
         $this->get('/layanan/uptd-ppa-kota-contoh')->assertOk()->assertSee('CONTOH DATA')->assertSee('[NOMOR TELEPON]')->assertSee('[NOMOR WHATSAPP]')->assertDontSee('href="tel:');
+    }
+
+    public function test_national_hotline_contacts_have_actionable_links(): void
+    {
+        $this->get('/cari/jawa-barat/kota-contoh')
+            ->assertOk()
+            ->assertSee('href="https://wa.me/628111129129"', false)
+            ->assertSee('href="https://laporsapa129.kemenpppa.go.id"', false)
+            ->assertSee('href="https://wa.me/6281110027727"', false)
+            ->assertSee('href="tel:1500771"', false);
     }
 
     public function test_public_html_does_not_load_assets_from_other_origins(): void
