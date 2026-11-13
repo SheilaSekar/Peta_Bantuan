@@ -1,0 +1,1 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">@foreach(['/','/cari','/hak-dan-alur','/keamanan-digital','/tentang'] as $path)<url><loc>{{ url($path) }}</loc></url>@endforeach @foreach($services as $service)<url><loc>{{ url('/layanan/'.$service['slug']) }}</loc></url>@endforeach</urlset>

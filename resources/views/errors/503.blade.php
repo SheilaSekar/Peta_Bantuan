@@ -1,0 +1,1 @@
+@extends('layouts.app') @section('title','Situs sedang tidak tersedia') @section('content')<h1>Situs sedang tidak tersedia.</h1><p>Kamu bisa mencoba lagi nanti, kembali ke <a href="/">Beranda</a>, atau hubungi <a href="tel:129">SAPA 129</a>.</p>@endsection

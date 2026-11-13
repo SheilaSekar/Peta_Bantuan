@@ -1,0 +1,1 @@
+@extends('layouts.app') @section('title','Terjadi kendala') @section('content')<h1>Maaf, ada kendala sementara.</h1><p>Coba kembali ke <a href="/">Beranda</a> atau hubungi <a href="tel:129">SAPA 129</a>.</p>@endsection

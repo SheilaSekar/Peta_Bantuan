@@ -1,0 +1,16 @@
+/vendor/
+/.env
+/.env.*.local
+/bootstrap/cache/*.php
+/storage/app/private/*
+/storage/app/public/*
+/storage/framework/cache/data/*
+!/storage/framework/cache/data/.gitkeep
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitkeep
+/storage/framework/views/*
+!/storage/framework/views/.gitkeep
+/storage/logs/*
+/public/build/
+/.phpunit.cache/
+/.phpunit.result.cache
